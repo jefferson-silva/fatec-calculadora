@@ -1,0 +1,14 @@
+body {
+	background: url(../img/bg.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+.spacer	{
+	margin-top: 15px;
+}
+
+.credits {
+	color: #fff;
+	font-weight: bold;
+	margin-top: 50px;
+}

@@ -16,6 +16,8 @@
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
+
+		<link href="css/styles.css" rel="stylesheet">
 	</head>
 	<body>
 		<div class="container">
@@ -24,11 +26,63 @@
 					<h1>Calculadora Fatec</h1>
 					<p class="lead">Diminua a ansiedade, calcule sua nota do vestibular Fatec!</p>
 				</div>
+			</div> <!-- end first .row -->
+
+			<div class="row spacer">
+				<div class="col-md-8 col-md-offset-2">
+					<form>
+						<div class="form-group">
+							<label for="peso_1">Peso 1:</label>
+							<input type="number" name="peso_1" class="form-control" placeholder="Notas de peso 1">
+						</div>
+
+						<div class="form-group">
+							<label for="peso_2">Peso 2:</label>
+							<input type="number" name="peso_2" class="form-control" placeholder="Notas de peso 1">
+						</div>
+
+						<div class="form-group">
+							<label for="enem">Enem:</label>
+							<input type="number" name="enem" class="form-control" placeholder="Nota da prova objetiva do Enem (opcional)">
+						</div>
+
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="checkbox-inline">
+									<input type="checkbox" id="escolaridade" value="option1"> Escolaridade Pública
+								</label>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="checkbox-inline">
+									<input type="checkbox" id="afrodescendencia" value="option1"> Afrodescendência
+								</label>
+							</div>
+						</div>
+
+						<div class="spacer"></div>
+
+						<div class="form-group text-center">
+							<div class="col-sm-2 col-sm-offset-4 spacer">
+								<input type="submit" class="btn btn-success btn-lg" value="Calcular">
+							</div>
+							<div class="col-sm-2 spacer">
+								<input type="reset" class="btn btn-danger btn-lg" value="Limpar">
+							</div>
+						</div>
+						
+					</form>
+				</div>
+			</div> <!-- end second .row -->
+
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<p class="credits">Desenvolvido por: <a href="https://github.com/jefferson-silva/fatec-calculadora">Jefferson Silva</a></p>
+				</div>
 			</div>
-
-
-
-		</div>
+		</div> <!-- end .container -->
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
