@@ -3,6 +3,10 @@ body {
 	background-size: cover;
 }
 
+.header {
+	color: #fff
+}
+
 .spacer	{
 	margin-top: 15px;
 }
@@ -19,4 +23,24 @@ label {
 
 input[type=number] {
 	height: 50px;
+}
+
+#prova-objetiva {
+	color: #fff;
+}
+
+#prova-objetiva span {
+	padding: 10px 15px;
+	margin-left: 15px;
+}
+
+#results {
+	display: none;
+	margin-top: 30px;
+}
+
+#results-table {
+	background: #fff;
+	border-radius: 5px;
+	margin-top: 30px;
 }
