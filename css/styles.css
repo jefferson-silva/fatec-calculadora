@@ -16,3 +16,7 @@ body {
 label {
 	color: #fff;
 }
+
+input[type=number] {
+	height: 50px;
+}
