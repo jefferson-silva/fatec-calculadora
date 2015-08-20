@@ -1,4 +1,27 @@
-// Calcula a nota final da Fatec
+$("document").ready(function() {
+	$("#form").submit(function (event) {
+		event.preventDefault();
+
+		$("#results tr").remove();
+
+		var peso1 = Number($("#peso_1").val());
+		var peso2 = Number($("#peso_2").val());
+		var enem = Number($("#enem").val());
+
+		var escolaPublica = $("#escolaridade").is(":checked") ? 0.10 : 0;
+		var afrodescendencia = $("#afrodescendencia").is(":checked") ? 0.03 : 0;
+
+		for (var redacao = 10; redacao <= 100; redacao += 10) {
+			var nota = notaFatec(peso1, peso2, redacao, enem, escolaPublica, afrodescendencia);
+			$("#results-table tbody").append("<tr><td>" + redacao + "</td><td>" + nota + "</td></tr>");
+		}
+
+		$("#results").fadeIn();
+	});
+});
+
+
+// Fórmula de cálculo da nota final do vestibular
 function notaFatec (peso1, peso2, redacao, enem, escolaPublica, afro) {
 	// nota ponderada das questões
 	var NPC = peso1 + 2 * peso2;
@@ -19,8 +42,8 @@ function notaFatec (peso1, peso2, redacao, enem, escolaPublica, afro) {
 	// nota final com pontuação acrescida
 	if (escolaPublica || afro) {
 		var NFA = NF * (1 + afro + escolaPublica);
-		return NFA;
+		return Math.min(NFA.toFixed(3), 100);
 	}
 
-	return NF;
+	return Math.min(NF.toFixed(3), 100);
 }
